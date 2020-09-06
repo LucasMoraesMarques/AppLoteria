@@ -2,11 +2,14 @@
 
 class Loterias(object):
 
-    def __init__(self, nome, n_acertos, n_possiveis, n_apostas):
+    def __init__(self, nome, cAtual, resultados):
         self.nome = nome
-        self.n_acertos = n_acertos
-        self.n_possiveis = n_possiveis
-        self.n_apostas = n_apostas
+        self.n_acertos = 0
+        self.n_possiveis = 0
+        self.n_apostas = 0
+        self.resultados = resultados
+        self.cAtual = cAtual
+        self.res_atual = self.resultados.iloc[0, 1:16].to_numpy()
 
     def __str__(self):
         return f'A loteria criada possui os seguintes atributos:\
@@ -16,14 +19,12 @@ class Loterias(object):
                 \nApostas disponíveis: {list(self.n_apostas)} números por jogos'
 
 
-class Sorteio(Loterias):
+class Sorteio():
 
-    def __init__(self, concurso, data, resultado, nome, premio=1000000,
-                 n_acertos=0, n_possiveis=0, n_apostas=0):
-        super().__init__(nome, n_acertos, n_apostas, n_possiveis)
+    def __init__(self, Loterias, concurso=0, data=0, premio=1000000, acumulado=False):
         self.concurso = concurso
         self.data = data
-        self.resultado = resultado
+        self.resultado = Loterias.res_atual
         self.premio = premio
 
     def __str__(self):
@@ -34,23 +35,31 @@ class Sorteio(Loterias):
                 \nPrêmio: {self.premio}'
 
 
-class Jogo(Sorteio):
+class Jogos():
 
-    def __init__(self, numeros, acertos, resultado):
-        super().__init__(resultado)
-        self.numeros = numeros
-        self.__acertos = False
+    def __init__(self, Sorteio, jogos):
+        self.jogos = jogos
+        self.acertos = 0
+        self.resultado= Sorteio.resultado
 
-    @property
+    def confere_acertos(self):
+        x = 0
+        acertos = []
+        for k, v in self.jogos.items():
+            x = len(v & set(self.resultado))
+            acertos.append([k, x])
+        return acertos
+
+    """@property
     def set_acertos(self):
-        self.__acertos = len(self.numeros & self.resultado)
+        self.acertos = len(self.numeros & self.resultado)
 
     @property
     def get_acertos(self):
-        if not self.__acertos:
+        if not self.acertos:
             print('O resultado para este jogo ainda não está disponível')
         else:
-            print(f'O jogo teve {self.__acertos} acertos no sorteio {self.concurso} da {self.nome}')
+            print(f'O jogo teve {self.acertos} acertos no sorteio {self.concurso} da {self.nome}')"""
 
 
 

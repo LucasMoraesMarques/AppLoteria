@@ -2786,3 +2786,147 @@ JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static
 * Can't use WebGL in headless mode (https://bugzil.la/1375585).
 1597678211076	Marionette	INFO	Stopped listening on port 56437
 [Parent 26800, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
+1597684424198	geckodriver	INFO	Listening on 127.0.0.1:57294
+1597684427026	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Lucas\\AppData\\Local\\Temp\\rust_mozprofileDNB0by"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1597684433846	Marionette	INFO	Listening on port 57302
+1597684434341	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybena-1.0.js, line 0: Successfully compiled asm.js code (total compilation time 92ms)
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 242: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 242: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 243: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 243: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybena-1.0.js, line 0: Successfully compiled asm.js code (total compilation time 54ms)
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 242: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 242: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 243: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 243: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1597684439888	Marionette	INFO	Stopped listening on port 57302
+1597684484415	geckodriver	INFO	Listening on 127.0.0.1:57378
+1597684487403	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Lucas\\AppData\\Local\\Temp\\rust_mozprofilesvw7T9"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597684489713	Marionette	INFO	Listening on port 57386
+1597684490012	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybena-1.0.js, line 0: Successfully compiled asm.js code (total compilation time 57ms)
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 242: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 242: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 243: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 243: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybena-1.0.js, line 0: Successfully compiled asm.js code (total compilation time 54ms)
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 242: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 242: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 243: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 243: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1597684495005	Marionette	INFO	Stopped listening on port 57386
+1597684557681	geckodriver	INFO	Listening on 127.0.0.1:57460
+1597684560670	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Lucas\\AppData\\Local\\Temp\\rust_mozprofilenA2uIA"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597684563095	Marionette	INFO	Listening on port 57468
+1597684563289	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybena-1.0.js, line 0: Successfully compiled asm.js code (total compilation time 62ms)
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 242: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 242: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 243: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 243: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybena-1.0.js, line 0: Successfully compiled asm.js code (total compilation time 52ms)
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 242: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 242: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 243: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 243: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1597684568445	Marionette	INFO	Stopped listening on port 57468
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
+1597710369753	geckodriver	INFO	Listening on 127.0.0.1:53163
+1597710372647	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Lucas\\AppData\\Local\\Temp\\rust_mozprofilezcsCpz"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597710387804	Marionette	INFO	Listening on port 53171
+1597710387897	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybena-1.0.js, line 0: Successfully compiled asm.js code (total compilation time 164ms)
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 242: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 242: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 243: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 243: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybena-1.0.js, line 0: Successfully compiled asm.js code (total compilation time 95ms)
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 242: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 242: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 243: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 243: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+Exiting due to channel error.
+Listening on 127.0.0.1:53247
+1597710482374	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Lucas\\AppData\\Local\\Temp\\rust_mozprofileTdJThX"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1597710485857	Marionette	INFO	Listening on port 53255
+1597710485988	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybena-1.0.js, line 0: Successfully compiled asm.js code (total compilation time 100ms)
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 242: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 242: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 243: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 243: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybena-1.0.js, line 0: Successfully compiled asm.js code (total compilation time 111ms)
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 242: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 242: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 243: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 243: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1597710506364	Marionette	INFO	Stopped listening on port 53255
+1597710649570	geckodriver	INFO	Listening on 127.0.0.1:53332
+1597710652581	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Lucas\\AppData\\Local\\Temp\\rust_mozprofileawFMiJ"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597710656876	Marionette	INFO	Listening on port 53340
+1597710657298	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybena-1.0.js, line 0: Successfully compiled asm.js code (total compilation time 101ms)
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 242: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 242: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 243: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 243: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybena-1.0.js, line 0: Successfully compiled asm.js code (total compilation time 95ms)
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 242: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 242: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 243: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://loterias.caixa.gov.br/InstitucionalTema/themes/static/js/rybenaDOMFull-1.5.js, line 243: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
