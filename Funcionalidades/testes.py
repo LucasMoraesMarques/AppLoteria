@@ -101,3 +101,5 @@ df.columns = ["Número", "Repetições"]
 print(df.sort_values(by="Repetições", ascending=False).set_index("Número"))
 
 
+
+

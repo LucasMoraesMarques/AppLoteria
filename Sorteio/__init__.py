@@ -2,14 +2,15 @@
 
 class Loterias(object):
 
-    def __init__(self, nome, cAtual, resultados):
+    def __init__(self, nome, cAtual, resultados, n_acertos=0, n_possiveis=0,
+                 n_apostas=0):
         self.nome = nome
-        self.n_acertos = 0
-        self.n_possiveis = 0
-        self.n_apostas = 0
+        self.n_acertos = n_acertos
+        self.n_possiveis = n_possiveis
+        self.n_apostas = n_apostas
         self.resultados = resultados
         self.cAtual = cAtual
-        self.res_atual = self.resultados.iloc[0, 1:16].to_numpy()
+        #self.res_atual = self.resultados.iloc[0, 1:16].to_numpy()
 
     def __str__(self):
         return f'A loteria criada possui os seguintes atributos:\
@@ -19,12 +20,14 @@ class Loterias(object):
                 \nApostas disponíveis: {list(self.n_apostas)} números por jogos'
 
 
-class Sorteio():
+class Sorteio(Loterias):
 
-    def __init__(self, Loterias, concurso=0, data=0, premio=1000000, acumulado=False):
-        self.concurso = concurso
-        self.data = data
-        self.resultado = Loterias.res_atual
+    def __init__(self, conc, premio, nome, cAtual, resultados=0):
+        super(Loterias).__init__(nome, cAtual, resultados)
+        self.concurso = conc[0]
+        self.data = conc[1]
+        #self.resultado = Loterias.res_atual
+        self.resultados = resultados
         self.premio = premio
 
     def __str__(self):
@@ -63,7 +66,10 @@ class Jogos():
 
 
 
-
-
+if __name__ == "__main__":
+    Lotofacil = Loterias("Lotofácil", 2152, resultados=0, n_acertos=15, n_possiveis=25, n_apostas=range(15, 21))
+    print(Lotofacil)
+    sorteioloto = Sorteio(Lotofacil, 2152, 1500000, 54)
+    print(sorteioloto)
 
 
