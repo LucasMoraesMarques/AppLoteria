@@ -3,3 +3,9 @@ __pycache__/
 *.sqlite3
 
 .DS_Store
+
+/Funcionalidades/todos.csv
+/Funcionalidades/todos2.csv
+/Funcionalidades/todoscopy.csv
+/Funcionalidades/todosjogosloto.csv
+/Funcionalidades/todosjogoslotocopy.csv

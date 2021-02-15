@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import time
 
 
 def isOdd(jogo):
@@ -8,7 +9,6 @@ def isOdd(jogo):
     :param jogo: Jogo único
     :return: Retorna True se o jogo é predominantemente ímpar. Caso contráriio, retorna False
     """
-    jogo = jogo
     bolArray = jogo.map(lambda x: x % 2)
     if jogo.size % 2 != 0:
         return True if bolArray.sum(axis=0) > np.floor(jogo.size/2) else False
@@ -17,21 +17,10 @@ def isOdd(jogo):
 
 
 def gap(jogo):
-    gap = []
+    g = []
     for i in range(0, len(jogo) - 1):
-        gap.append(jogo[i+1] - jogo[i])
-    return gap
-"""
-
-dt = pd.read_csv("dt_resultados.csv", index_col=0, header=0)
-print(dt.head())
-for _, jogo in dt.iloc[0:5, 1: ].iterrows():
-    print(jogo)
-    bolArray = jogo.map(lambda x: x % 2)
-    print(bolArray.sum(axis=0))
-    print(isOdd(jogo))"""
-
-dt = pd.read_csv("dt_resultados.csv", index_col=0, header=0)
+        g.append(jogo[i+1] - jogo[i])
+    return g
 
 
 def sequences(jogo):
@@ -60,26 +49,18 @@ def hasCol(jogo):
                      [4, 9, 14, 19, 24], [5, 10, 15, 20, 25]])
     hasCol = []
     for col in cols:
-        hasCol.append([True if (ints:= len(np.intersect1d(col, jogo))) != 0 else False, ints])
+        hasCol.append(True if (ints:= len(np.intersect1d(col, jogo))) != 0 else False)
     return hasCol
 
 
 def hasRow(jogo):
     rows = np.array([np.arange(1, 6), np.arange(6, 11), np.arange(11, 16),
                      np.arange(16, 21), np.arange(21, 26)])
-    print(rows)
-    hasRow = []
+    hasRowArr = []
     for row in rows:
-        hasRow.append([True if (ints:= len(np.intersect1d(row, jogo))) != 0 else False, ints])
-    return hasRow
+        hasRowArr.append(True if (ints:= len(np.intersect1d(row, jogo))) != 0 else False)
+    return hasRowArr
 
-"""for _, jogo in dt.iloc[0:100, 1: ].iterrows():
-    j = jogo.array
-    print(j)
-    print(columnsNumber(j))
-    print()"""
-
-# Função para database de resultados
 
 
 def numberRankingAll(jogos):
@@ -92,14 +73,49 @@ def numberRankingAll(jogos):
         # print(f"Número {i}: {v}x")
 
 
-dt = pd.read_csv("dt_resultados.csv", index_col=0, header=0)
 
-print(dt.head())
+"""print(dt.head())
 print(numberRankingAll(dt))
 df = pd.DataFrame(numberRankingAll(dt))
 df.columns = ["Número", "Repetições"]
-print(df.sort_values(by="Repetições", ascending=False).set_index("Número"))
+print(df.sort_values(by="Repetições", ascending=False).set_index("Número"))"""
+
+""" Cria colunas isOdd e maxGap
+dt["isOdd"] = dt.apply(isOdd, axis=1)
+dt["maxGap"] = dt.iloc[:, 0:14].apply(gap, axis=1).apply(lambda x: max(x))
+print(dt.head())
+dt.to_csv("todos.csv")
+
+dt["hasRow"] = dt.iloc[:, 0:15].apply(lambda x: hasRow(x), axis=1)
+dt["hasRow1"] = dt["hasRow"].apply(lambda x: x[0])
+dt["hasRow2"] = dt["hasRow"].apply(lambda x: x[1])
+dt["hasRow3"] = dt["hasRow"].apply(lambda x: x[2])
+dt["hasRow4"] = dt["hasRow"].apply(lambda x: x[3])
+dt["hasRow5"] = dt["hasRow"].apply(lambda x: x[4])
+dt.drop("hasRow", axis=1, inplace=True)
+print(f"1/3 : {time.process_time()}")
+dt["hasCol"] = dt.iloc[:, 0:15].apply(lambda x: hasCol(x), axis=1)
+dt["hasCol1"] = dt["hasCol"].apply(lambda x: x[0])
+dt["hasCol2"] = dt["hasCol"].apply(lambda x: x[1])
+dt["hasCol3"] = dt["hasCol"].apply(lambda x: x[2])
+dt["hasCol4"] = dt["hasCol"].apply(lambda x: x[3])
+dt["hasCol5"] = dt["hasCol"].apply(lambda x: x[4])
+dt.drop("hasCol", axis=1, inplace=True)
+print(f"2/3 : {time.process_time()}")
+dt["maxSeq"] = dt.iloc[:, 0:15].apply(lambda x: sequences(x), axis=1).apply(lambda x: max(x))
+dt["minSeq"] = dt.iloc[:, 0:15].apply(lambda x: sequences(x), axis=1).apply(lambda x: min(x))
+print(f"3/3 : {time.process_time()}")
+dt.to_csv("todos.csv")
+
+dt = pd.read_csv('todos.csv', header=0, index_col=0)
+
+dtcopy = dt.copy()
+dtcopy = dtcopy.astype({f'{i}': "int8" for i in range(0, 15)})
+dtcopy = dtcopy.astype({'maxGap': "int8", "minSeq": "int8", "maxSeq": "int8"})
+"""
 
 
-
+#dt = pd.read_pickle('todos.csv')
+#print(dt)
+#dt.to_pickle("todos.csv")
 
