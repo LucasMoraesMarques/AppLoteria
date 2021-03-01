@@ -4,13 +4,14 @@ import csv
 from ProjetosLoteria.App.Sorteio import Sorteio, Loterias, Jogos
 import requests
 from openpyxl import load_workbook
+import pprint
 
 
 url = 'https://cutt.ly/LfnJrGv'
 
 
 def carrega_resultados():
-    resultados = pd.read_excel('teste.xlsx', index_col=0, parse_dates=['Data'])
+    resultados = pd.read_excel('resultados.xlsx', index_col=0, parse_dates=['Data'])
     cAtual = resultados.index[0]
     loto = Loterias('Lotofácil', cAtual, resultados)
     return loto
@@ -28,11 +29,11 @@ def busca_resultado(url):
 
 
 def atualiza_resultados(dtf, resultado, loto):
-    if float(resultado['nu_concurso']) != loto.cAtual:
-        res = pd.DataFrame([[resultado['dt_apuracaoStr']] + resultado['resultadoOrdenado'].split('-')], columns=dtf.columns, index=[int(float(resultado["nu_concurso"]))])
+    if float(resultado['numero']) != loto.cAtual:
+        res = pd.DataFrame([[resultado['dataApuracao']] + resultado['listaDezenas']], columns=dtf.columns, index=[int(float(resultado["numero"]))])
         dt = dtf.append(res)
         dt.sort_index(inplace=True, ascending=False, axis=0)
-        dt.to_excel('teste.xlsx')
+        dt.to_excel('resultados.xlsx')
         return dt
     else:
         print('O resultado do concurso atual ainda não está disponível')
@@ -66,17 +67,12 @@ def confere_jogos(Loto, conc):
     f.close()
 
 
-Loto = carrega_resultados()
-conc = Sorteio(Loto)
-dt = Loto.resultados
-resultado = busca_resultado(url)
-print(Loto.cAtual)
+dt = pd.read_excel('resultados.xlsx', index_col=0, header=0)
 
 dt = atualiza_resultados(dt, resultado, Loto)
-print(pd.read_excel('teste.xlsx', index_col=0))
 print(Loto.res_atual)
-confere_jogos(Loto, conc)
-
+print(dt)
+dt.to_csv("dt_resultados.csv")
 
 
 

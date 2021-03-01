@@ -62,49 +62,96 @@ def hasRow(jogo):
     return hasRowArr
 
 
-
-def numberRankingAll(jogos):
-    arr = jogos.iloc[:, 1:].to_numpy()
-    rep = np.zeros((25,2)).astype("int")
+def numberRankingAll(resultados):
+    arr = resultados.loc[:, "bola 1": "bola 15"].to_numpy()
+    rep = np.zeros((25,2)).astype("int8")
     for i in range(1, 26):
         v = np.where(arr == i, True, False).sum()
         rep[i-1] = (i,v)
-    return rep
-        # print(f"Número {i}: {v}x")
+    df = pd.DataFrame(rep)
+    df.columns = ["Número", "Repetições"]
+    df.sort_values(by="Repetições", ascending=False, inplace=True)
+    df.set_index("Número", inplace=True)
+    return df
+
+
+""" Testa numberRankingAll
+
+dt = pd.read_csv("dt_resultados.csv", index_col=0, header=0)
+print(dt.head())
+df = numberRankingAll(dt)
+print(df)
+"""
+
+
+def updateResultsDatabase(results):
+    results["isOdd"] = results.loc[:, "bola 1":"bola 15"].apply(isOdd, axis=1)
+    results["maxGap"] = results.loc[:, "bola 1":"bola 15"].apply(gap, axis=1).apply(lambda x: max(x))
+    results["maxSeq"] = results.loc[:, "bola 1":"bola 15"].apply(lambda x: sequences(x), axis=1).apply(lambda x: max(x))
+    results["minSeq"] = results.loc[:, "bola 1":"bola 15"].apply(lambda x: sequences(x), axis=1).apply(lambda x: min(x))
+    results["PrimeNumbers"] = results.loc[:, "bola 1":"bola 15"].apply(nPrimeNumbers, axis=1)
+    return results
+
+
+def nPrimeNumbers(jogo=0, loto_range=range(1, 26)):
+    primeNumbers = []
+    for i in loto_range:
+        s = 0
+        for j in range(1, i+1):
+            if i % j == 0:
+                s += 1
+        if s == 2:
+            primeNumbers.append(i)
+    return np.intersect1d(primeNumbers, jogo).size
+
+dt = pd.read_csv("dt_resultados.csv", index_col=0, header=0)
+print(dt)
+dt = updateResultsDatabase(dt)
+print(dt)
+
+"""dt = pd.read_csv("dt_resultados.csv", index_col=0, header=0)
+print(dt)
+dt = updateResultsDatabase(dt)
+print(dt)
+print(dt["isOdd"].value_counts())
+print(dt["maxGap"].value_counts())
+print(dt["maxSeq"].value_counts())
+print(dt["minSeq"].value_counts())
+print(dt[dt["maxGap"] < 5])
+print(dt[dt["isOdd"] == True])
+print(dt[dt["maxSeq"] < 7])
+"""
 
 
 
-"""print(dt.head())
-print(numberRankingAll(dt))
-df = pd.DataFrame(numberRankingAll(dt))
-df.columns = ["Número", "Repetições"]
-print(df.sort_values(by="Repetições", ascending=False).set_index("Número"))"""
+
+
+
+
+
+
+
+
+
+
+
+
 
 """ Cria colunas isOdd e maxGap
 dt["isOdd"] = dt.apply(isOdd, axis=1)
-dt["maxGap"] = dt.iloc[:, 0:14].apply(gap, axis=1).apply(lambda x: max(x))
-print(dt.head())
-dt.to_csv("todos.csv")
+dt["maxGap"] = dt.iloc[:, 0:15].apply(gap, axis=1).apply(lambda x: max(x))
 
 dt["hasRow"] = dt.iloc[:, 0:15].apply(lambda x: hasRow(x), axis=1)
-dt["hasRow1"] = dt["hasRow"].apply(lambda x: x[0])
-dt["hasRow2"] = dt["hasRow"].apply(lambda x: x[1])
-dt["hasRow3"] = dt["hasRow"].apply(lambda x: x[2])
-dt["hasRow4"] = dt["hasRow"].apply(lambda x: x[3])
-dt["hasRow5"] = dt["hasRow"].apply(lambda x: x[4])
+dt["hasRow1"] = dt["hasRow"].apply(lambda x: x[0]) ...
 dt.drop("hasRow", axis=1, inplace=True)
-print(f"1/3 : {time.process_time()}")
+
 dt["hasCol"] = dt.iloc[:, 0:15].apply(lambda x: hasCol(x), axis=1)
-dt["hasCol1"] = dt["hasCol"].apply(lambda x: x[0])
-dt["hasCol2"] = dt["hasCol"].apply(lambda x: x[1])
-dt["hasCol3"] = dt["hasCol"].apply(lambda x: x[2])
-dt["hasCol4"] = dt["hasCol"].apply(lambda x: x[3])
-dt["hasCol5"] = dt["hasCol"].apply(lambda x: x[4])
+dt["hasCol1"] = dt["hasCol"].apply(lambda x: x[0]) ...
 dt.drop("hasCol", axis=1, inplace=True)
-print(f"2/3 : {time.process_time()}")
+
 dt["maxSeq"] = dt.iloc[:, 0:15].apply(lambda x: sequences(x), axis=1).apply(lambda x: max(x))
 dt["minSeq"] = dt.iloc[:, 0:15].apply(lambda x: sequences(x), axis=1).apply(lambda x: min(x))
-print(f"3/3 : {time.process_time()}")
+
 dt.to_csv("todos.csv")
 
 dt = pd.read_csv('todos.csv', header=0, index_col=0)
@@ -114,8 +161,26 @@ dtcopy = dtcopy.astype({f'{i}': "int8" for i in range(0, 15)})
 dtcopy = dtcopy.astype({'maxGap': "int8", "minSeq": "int8", "maxSeq": "int8"})
 """
 
+"""
+dt = pd.read_pickle('todos.csv')
+print(dt)
+dt.to_pickle("todos.csv")"""
+#print(dt.iloc[:, 0:15][~dt.isin([1, 2])].dropna())
+#print(dt[dt["isOdd"] == True])"""
 
-#dt = pd.read_pickle('todos.csv')
-#print(dt)
-#dt.to_pickle("todos.csv")
+"""dt = pd.read_pickle('todos.csv')
+print(dt)
+print(dt["isOdd"].value_counts())
+print(dt["maxGap"].value_counts())
+print(dt["maxSeq"].value_counts())
+print(dt["minSeq"].value_counts())
+dt = dt[dt["maxGap"] == 4]
+dt = dt[dt["maxSeq"] < 7]
+dt = dt[dt["minSeq"] < 2]
+dt = dt[dt["isOdd"] == True]
+print(dt)
+dt.to_csv("allfiltered.csv")"""
+
+#for _, j in dt.iloc[500000:500200, 0:15].iterrows():
+ #   print(j)
 

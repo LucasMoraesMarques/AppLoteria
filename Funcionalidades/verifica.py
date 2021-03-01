@@ -6,6 +6,7 @@ url = 'https://cutt.ly/LfnJrGv'
 file = r"C:\Users\Lucas\PycharmProjects\ProjetosLoteria\App\Funcionalidades\Jogo.xlsx"
 file_res = r"C:\Users\Lucas\PycharmProjects\ProjetosLoteria\App\Funcionalidades\resultados.txt"
 
+
 def busca_resultado(url):
     while True:
         resp = requests.get(url)
@@ -31,7 +32,7 @@ def confere_resultados(resultado, jogos, file):
     f = open(file, "w+")
     f.write(f"Resultado referente ao concurso nº {resultado['numero']} da {resultado['tipoJogo']} "
             f"realizado no dia {resultado['dataApuracao']}\n")
-
+    # Pandas retorna um dict para excel com mais de 1 planilha
     for k, v in jogos.items():
         f.write(f"\n{k:=^20}\n")
         for k, v in acertos(res, v).items():
