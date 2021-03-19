@@ -3,8 +3,8 @@ import pandas as pd
 import openpyxl
 
 url = 'https://cutt.ly/LfnJrGv'
-file = r"C:\Users\Lucas\PycharmProjects\ProjetosLoteria\App\Funcionalidades\Jogo.xlsx"
-file_res = r"C:\Users\Lucas\PycharmProjects\ProjetosLoteria\App\Funcionalidades\resultados.txt"
+file = r"C:\Users\Lucas\PycharmProjects\ProjetosLoteria\App\Testes\Jogo.xlsx"
+file_res = r"C:\Users\Lucas\PycharmProjects\ProjetosLoteria\App\Testes\resultados.txt"
 
 
 def busca_resultado(url):

@@ -4,10 +4,12 @@ __pycache__/
 
 .DS_Store
 
-/Funcionalidades/todos.csv
-/Funcionalidades/todos2.csv
-/Funcionalidades/todoscopy.csv
+/Funcionalidades/todosLotoFiltrados.csv
 /Funcionalidades/todosjogosloto.csv
-/Funcionalidades/todosjogoslotocopy.csv
-/Funcionalidades/allfiltered.csv
-/Funcionalidades/todosfullcopy.csv
+
+/data/loterias/diadesorte/todasCombsFiltradas.csv
+/data/loterias/lotofacil/todasCombsFiltradas.csv
+/data/loterias/lotofacil/todosjogosloto.csv
+/Testes/garbage.py
+/Testes/MStodas.txt
+/allfiltered.csv
