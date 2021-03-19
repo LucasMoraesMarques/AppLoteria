@@ -1,0 +1,118 @@
+{
+    "tipoJogo": "LOTOFACIL",
+    "numero": 2184,
+    "nomeMunicipioUFSorteio": "S\u00c3O PAULO, SP",
+    "dataApuracao": "18/03/2021",
+    "valorArrecadado": 13914095.0,
+    "valorEstimadoProximoConcurso": 1500000.0,
+    "valorAcumuladoProximoConcurso": 0.0,
+    "valorAcumuladoConcursoEspecial": 54626845.17,
+    "valorAcumuladoConcurso_0_5": 731025.28,
+    "acumulado": false,
+    "indicadorConcursoEspecial": 1,
+    "dezenasSorteadasOrdemSorteio": [
+        "009",
+        "019",
+        "010",
+        "024",
+        "022",
+        "012",
+        "005",
+        "015",
+        "025",
+        "007",
+        "011",
+        "017",
+        "020",
+        "021",
+        "014"
+    ],
+    "listaResultadoEquipeEsportiva": null,
+    "numeroJogo": 8,
+    "nomeTimeCoracaoMesSorte": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "tipoPublicacao": 3,
+    "observacao": "",
+    "localSorteio": "ESPA\u00c7O LOTERIAS CAIXA                   ",
+    "dataProximoConcurso": "19/03/2021",
+    "numeroConcursoAnterior": 2183,
+    "numeroConcursoProximo": 2185,
+    "valorTotalPremioFaixaUm": 0,
+    "numeroConcursoFinal_0_5": 2190,
+    "listaRateioPremio": [
+        {
+            "faixa": 1,
+            "numeroDeGanhadores": 3,
+            "valorPremio": 301819.54,
+            "descricaoFaixa": "15 acertos"
+        },
+        {
+            "faixa": 2,
+            "numeroDeGanhadores": 349,
+            "valorPremio": 777.13,
+            "descricaoFaixa": "14 acertos"
+        },
+        {
+            "faixa": 3,
+            "numeroDeGanhadores": 11221,
+            "valorPremio": 25.0,
+            "descricaoFaixa": "13 acertos"
+        },
+        {
+            "faixa": 4,
+            "numeroDeGanhadores": 105156,
+            "valorPremio": 10.0,
+            "descricaoFaixa": "12 acertos"
+        },
+        {
+            "faixa": 5,
+            "numeroDeGanhadores": 522673,
+            "valorPremio": 5.0,
+            "descricaoFaixa": "11 acertos"
+        }
+    ],
+    "listaMunicipioUFGanhadores": [
+        {
+            "posicao": 1,
+            "ganhadores": 1,
+            "municipio": "BRASILIA ",
+            "uf": "DF",
+            "nomeFatansiaUL": "",
+            "serie": ""
+        },
+        {
+            "posicao": 1,
+            "ganhadores": 1,
+            "municipio": "RIO DE JANEIRO ",
+            "uf": "RJ",
+            "nomeFatansiaUL": "",
+            "serie": ""
+        },
+        {
+            "posicao": 1,
+            "ganhadores": 1,
+            "municipio": "PORTO ALEGRE ",
+            "uf": "RS",
+            "nomeFatansiaUL": "",
+            "serie": ""
+        }
+    ],
+    "listaDezenas": [
+        "005",
+        "007",
+        "009",
+        "010",
+        "011",
+        "012",
+        "014",
+        "015",
+        "017",
+        "019",
+        "020",
+        "021",
+        "022",
+        "024",
+        "025"
+    ],
+    "listaDezenasSegundoSorteio": null,
+    "id": null
+}
