@@ -1,0 +1,8 @@
+As opções disponíveis são:
+
+1 -> Cadastrar Jogos
+2 -> Criar Jogos
+3 -> Carregar Jogos
+4 -> Todos Resultados
+
+Digite -2 para voltar ao menu principal

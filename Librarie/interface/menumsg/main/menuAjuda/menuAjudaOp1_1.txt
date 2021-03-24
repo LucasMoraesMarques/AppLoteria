@@ -1,0 +1,5 @@
+LOTOFÁCIL:
+
+-> Marca-se de 15 a 20 números dos 25 possíveis (1 a 25)
+-> Ganha acertando de 11 a 15 pontos, sendo 15 pontos o prêmio máximo de cada sorteio
+-> A probabilidade de acertar os 15 pontos com a aposta padrão de 15 números é de 1 para 3.268.760 possibilidades.

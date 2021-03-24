@@ -1,0 +1,10 @@
+Os filtros disponíveis são:
+
+-> Máxima diferença entre dois números consecutivos
+-> Máxima e mínima sequência ininterrupta de números
+-> Quantidade de números primos
+-> Paridade
+-> Remoção de números
+-> Fixação de números
+
+Para afirmações, use 1 para sim e 0 para não. Para não usar o filtro, digite -1

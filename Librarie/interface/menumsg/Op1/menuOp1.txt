@@ -1,0 +1,7 @@
+Oferecemos duas opções de entrada de jogos externos:
+
+1 -> Entrada manual por digitação
+2 -> Entrada por arquivo
+3 -> Entrada pela Área de transferência (ctrl + c)
+
+Digite -3 para voltar ao menu Iniciar

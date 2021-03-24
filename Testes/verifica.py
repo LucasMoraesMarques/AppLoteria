@@ -20,7 +20,6 @@ def busca_resultado(url):
 
 def busca_jogos(file):
     jogos = pd.read_excel(file, sheet_name=None, header=None, index_col=0)
-
     return jogos
 
 
@@ -37,6 +36,7 @@ def confere_resultados(resultado, jogos, file):
         f.write(f"\n{k:=^20}\n")
         for k, v in acertos(res, v).items():
             f.write(f"{k}: {v} acertos\n")
+    f.close()
 
 
 def acertos(resultados, jogos):

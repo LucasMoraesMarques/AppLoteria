@@ -1,0 +1,6 @@
+Qual sorteio você deseja conferir?
+
+1 -> O último
+2 -> Outro qualquer
+
+Digite -4 para voltar ao menu de jogos

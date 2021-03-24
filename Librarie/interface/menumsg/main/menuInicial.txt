@@ -1,0 +1,7 @@
+Escolha uma opção:
+
+1 -> INICIAR
+2 -> AJUDA
+3 -> SOBRE
+
+Digite -1 para sair

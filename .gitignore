@@ -10,6 +10,5 @@ __pycache__/
 /data/loterias/diadesorte/todasCombsFiltradas.csv
 /data/loterias/lotofacil/todasCombsFiltradas.csv
 /data/loterias/lotofacil/todosjogosloto.csv
-/Testes/garbage.py
-/Testes/MStodas.txt
+/Testes
 /allfiltered.csv

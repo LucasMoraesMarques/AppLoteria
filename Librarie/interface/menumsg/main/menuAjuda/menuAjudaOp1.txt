@@ -1,0 +1,5 @@
+As Loterias disponíveis atualmente são:
+
+1 -> Lotofácil
+2 -> Dia de Sorte
+3 -> Mega Sena

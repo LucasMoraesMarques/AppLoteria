@@ -1,10 +1,8 @@
 import pandas as pd
-import numpy as np
 import requests
 from requests.exceptions import RequestException
 import json
 import os
-from pprint import pprint
 
 #os.chdir(r"../")
 
@@ -17,8 +15,8 @@ class Sorteio(object):
         :param Loterias: Tipo de Loteria
         """
         self.loteria = Loterias
-        self.resultado = 0
-        self.metadata = 0
+        self.resultado = self.readConfig()
+        self.metadata = {}
         self.url_mapper = {"lotofacil": 'https://cutt.ly/LfnJrGv',
                            "diadesorte": "https://cutt.ly/BzX3Grq"}
 
@@ -45,6 +43,8 @@ class Sorteio(object):
             elif self.loteria.nome == "diadesorte":
                 self.resultado = self.metadata["listaDezenas"] + [self.metadata["nomeTimeCoracaoMesSorte"]]
             self.loteria.updateResults(self.metadata)
+            print('O último resultado encontrado foi:')
+            print(self.resultado)
 
     def writeConfig(self):
         """ Salva os dados do último resultado
@@ -67,6 +67,29 @@ class Sorteio(object):
 
         :return: None
         """
-        print(self.metadata)
+        for k, v in self.metadata.items():
+            if k == "tipoJogo":
+                print(f"Loteria: {v.capitalize()}")
+            elif k == "numero":
+                print(f"Concurso: {v}")
+            elif k == "dataApuracao":
+                print(f"Data: {v}")
+            elif k == "acumulado":
+                if v:
+                    print(f"Valor acumulado para o concurso {self.metadata['numero']+1} dia "
+                          f"{self.metadata['dataProximoConcurso']}: "
+                          f"{self.metadata['valorAcumuladoProximoConcurso']}")
+            elif k == "listaDezenas":
+                print(f"Dezenas sorteadas: ")
+                for i in v:
+                    print(i, end= " ")
+                print('\n')
+            elif k == self.metadata["nomeTimeCoracaoMesSorte"] and k not in ['', None, 0]:
+                print(f"{v}")
+            elif k == "listaRateioPremio":
+                for i in self.metadata["listaRateioPremio"]:
+                    print(f"{i['descricaoFaixa']}")
+                    print(f' -> Prêmio: {i["valorPremio"]}')
+                    print(f' -> Número de ganhadores: {i["numeroDeGanhadores"]}')
 
 

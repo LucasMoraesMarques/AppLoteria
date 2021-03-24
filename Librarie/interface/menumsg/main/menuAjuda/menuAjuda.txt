@@ -1,0 +1,6 @@
+Ajuda
+
+1 -> Loterias Disponíveis
+2 -> Funcionalidades
+
+Digite -2 para voltar ao menu inicial

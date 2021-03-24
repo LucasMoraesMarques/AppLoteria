@@ -1,0 +1,46 @@
+FUNCIONALIDADES
+
+-> CADASTRO DE JOGOS
+
+    Permite os seguintes tipos de entradas de jogos externos:
+
+    1 -> Entrada manual por digitação
+    2 -> Entrada por arquivo (csv, txt, xlsx)
+    3 -> Entrada pela Área de transferência (ctrl + c)
+
+-> GERADORES DE JOGOS
+
+    1 -> GERADOR SIMPLES:
+        -> Gera jogos randômicos de forma autônoma.
+        -> Permite jogos com mais números por aposta
+        -> Permite remoção e fixação de números
+
+    2 -> GERADOR INTELIGENTE:
+        -> Gera jogos randômicos de forma personalizada, por meio de filtros específicos
+        -> Permite filtros como:
+            -> Máxima diferença entre dois números
+            -> Máxima sequência ininterrupta
+            -> Mínima sequência ininterrupta
+            -> Paridade do jogo, isto é, se é par ou ímpar
+            -> Quantidade de números primos
+            -> Remoção e fixação de números
+            -> Foi sorteado
+        -> A única desvantagem é que só permite o número fixo padrão para cada aposta.
+        -> Não está disponível para a Mega Sena
+
+-> MANIPULAÇÃO DE JOGOS
+
+    Permite as seguintes operações com conjuntos de jogos:
+
+    1 -> Conferir resultados e exportar por arquivo
+    2 -> Filtrar jogos
+    3 -> Mostrar estatísticas
+    4 -> Deletar jogos
+
+-> DATABASE DE RESULTADOS
+
+    Fornece as seguintes funcionalidades:
+
+    1 -> Mostrar todos os resultados de uma determinada Loteria
+    2 -> Mostrar estatísticas dos resultados
+

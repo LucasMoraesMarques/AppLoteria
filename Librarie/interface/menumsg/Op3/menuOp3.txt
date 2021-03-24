@@ -1,0 +1,8 @@
+O que você deseja fazer com o jogo carregado? As opções são:
+
+1 -> Conferir resultados
+2 -> Filtrar jogos
+3 -> Mostrar estatísticas
+4 -> Deletar jogos
+
+Digite -3 para voltar ao menu Iniciar

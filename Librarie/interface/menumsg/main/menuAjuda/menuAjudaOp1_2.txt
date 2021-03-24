@@ -1,0 +1,6 @@
+DIA DE SORTE:
+
+-> Marca-se de 7 a 15 números dos 31 possíveis (1 a 31), além do mês de sorte.
+-> Ganha acertando de 4 a 7 pontos, sendo 7 pontos o prêmio máximo de cada sorteio.
+-> Acertar o mês de sorte rende apenas valores simbólicos.
+-> A probabilidade de acertar os 7 pontos com a aposta padrão de 7 números é de 1 para 2.629.575 possibilidades.

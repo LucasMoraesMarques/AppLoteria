@@ -1,0 +1,10 @@
+Sobre
+
+O APP Loterias foi densenvolvido para facilitar as apostas realizadas na Loteria Federal.
+Gravado em Python, o nosso produto é extremamente rápido, fácil de usar e GRATUITO. O objetivo
+desse projeto é mostrar que a maior parte do processo de apostar na loteria deve ser feita de
+forma racional, matemática e crítica. As probabilidades de prêmio são muito baixas para jogar
+levianamente, desperdiçando dinheiro, tempo e paciência. Aproveite as funcionalidades que desen
+volvemos com tanto esforço e lembre-se, nunca aposte mais do que você pode pagar, não deixe o jogo
+se tornar um vício em sua vida
+Att., Desenvolvedores.

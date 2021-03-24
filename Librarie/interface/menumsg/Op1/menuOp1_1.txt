@@ -1,0 +1,1 @@
+Entre o nome, o número de jogos a serem salvos e o número de marcações por aposta.

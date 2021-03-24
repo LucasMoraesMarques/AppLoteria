@@ -1,0 +1,7 @@
+As funcionalidades disponíveis são:
+
+1 -> Mostrar metadados sobre a database
+2 -> Filtrar database
+3 -> Grupos de n números que mais saíram
+
+Digite -4 para voltar ao menu de resultados
