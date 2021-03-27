@@ -1,0 +1,77 @@
+{
+    "tipoJogo": "DIA_DE_SORTE",
+    "numero": 435,
+    "nomeMunicipioUFSorteio": "S\u00c3O PAULO, SP",
+    "dataApuracao": "25/03/2021",
+    "valorArrecadado": 1455042.0,
+    "valorEstimadoProximoConcurso": 700000.0,
+    "valorAcumuladoProximoConcurso": 546005.02,
+    "valorAcumuladoConcursoEspecial": 0.0,
+    "valorAcumuladoConcurso_0_5": 0.0,
+    "acumulado": true,
+    "indicadorConcursoEspecial": 1,
+    "dezenasSorteadasOrdemSorteio": [
+        "014",
+        "021",
+        "026",
+        "030",
+        "008",
+        "023",
+        "007"
+    ],
+    "listaResultadoEquipeEsportiva": null,
+    "numeroJogo": 11,
+    "nomeTimeCoracaoMesSorte": "Janeiro          ",
+    "tipoPublicacao": 3,
+    "observacao": "",
+    "localSorteio": "ESPA\u00c7O LOTERIAS CAIXA                   ",
+    "dataProximoConcurso": "27/03/2021",
+    "numeroConcursoAnterior": 434,
+    "numeroConcursoProximo": 436,
+    "valorTotalPremioFaixaUm": 0,
+    "numeroConcursoFinal_0_5": 0,
+    "listaMunicipioUFGanhadores": [],
+    "listaRateioPremio": [
+        {
+            "faixa": 1,
+            "numeroDeGanhadores": 0,
+            "valorPremio": 0.0,
+            "descricaoFaixa": "7 acertos"
+        },
+        {
+            "faixa": 2,
+            "numeroDeGanhadores": 48,
+            "valorPremio": 1829.87,
+            "descricaoFaixa": "6 acertos"
+        },
+        {
+            "faixa": 3,
+            "numeroDeGanhadores": 1642,
+            "valorPremio": 20.0,
+            "descricaoFaixa": "5 acertos"
+        },
+        {
+            "faixa": 4,
+            "numeroDeGanhadores": 18814,
+            "valorPremio": 4.0,
+            "descricaoFaixa": "4 acertos"
+        },
+        {
+            "faixa": 5,
+            "numeroDeGanhadores": 52204,
+            "valorPremio": 2.0,
+            "descricaoFaixa": "M\u00eas da Sorte"
+        }
+    ],
+    "listaDezenas": [
+        "007",
+        "008",
+        "014",
+        "021",
+        "023",
+        "026",
+        "030"
+    ],
+    "listaDezenasSegundoSorteio": null,
+    "id": null
+}

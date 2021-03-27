@@ -1,0 +1,11 @@
+Por padrão, somente o gerador simples está disponível. Entretanto,
+baixando os arquivos abaixo você poderá habilitar o uso do gerador
+inteligente, o qual aplica filtros na produção de jogos. Tal upgrade
+está disponível somente para a Lotofácil e Dia de Sorte.
+
+Escolha qual deseja baixar?
+
+1 -> Baixar upgrade para Dia de Sorte (243mb)
+2 -> Baixar upgrade para Lotofácil (162mb)
+
+Digite -2 para voltar ao menu principal.

@@ -1,0 +1,6 @@
+As opções de Loteria disponíveis são:
+
+1 -> Lotofácil
+2 -> Dia de Sorte
+
+Digite uma opção válida.

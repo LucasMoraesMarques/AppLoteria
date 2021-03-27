@@ -1,0 +1,63 @@
+{
+    "tipoJogo": "MEGA_SENA",
+    "numero": 2355,
+    "nomeMunicipioUFSorteio": "S\u00c3O PAULO, SP",
+    "dataApuracao": "24/03/2021",
+    "valorArrecadado": 39448795.5,
+    "valorEstimadoProximoConcurso": 27000000.0,
+    "valorAcumuladoProximoConcurso": 22066933.07,
+    "valorAcumuladoConcursoEspecial": 15897888.53,
+    "valorAcumuladoConcurso_0_5": 2633562.14,
+    "acumulado": true,
+    "indicadorConcursoEspecial": 1,
+    "dezenasSorteadasOrdemSorteio": [
+        "031",
+        "007",
+        "030",
+        "041",
+        "056",
+        "050"
+    ],
+    "listaResultadoEquipeEsportiva": null,
+    "numeroJogo": 2,
+    "nomeTimeCoracaoMesSorte": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "tipoPublicacao": 3,
+    "observacao": "",
+    "localSorteio": "ESPA\u00c7O LOTERIAS CAIXA                   ",
+    "dataProximoConcurso": "27/03/2021",
+    "numeroConcursoAnterior": 2354,
+    "numeroConcursoProximo": 2356,
+    "valorTotalPremioFaixaUm": 0,
+    "numeroConcursoFinal_0_5": 2360,
+    "listaMunicipioUFGanhadores": [],
+    "listaRateioPremio": [
+        {
+            "faixa": 1,
+            "numeroDeGanhadores": 0,
+            "valorPremio": 0.0,
+            "descricaoFaixa": "6 acertos"
+        },
+        {
+            "faixa": 2,
+            "numeroDeGanhadores": 29,
+            "valorPremio": 78428.97,
+            "descricaoFaixa": "5 acertos"
+        },
+        {
+            "faixa": 3,
+            "numeroDeGanhadores": 2014,
+            "valorPremio": 1613.3,
+            "descricaoFaixa": "4 acertos"
+        }
+    ],
+    "listaDezenas": [
+        "007",
+        "030",
+        "031",
+        "041",
+        "050",
+        "056"
+    ],
+    "listaDezenasSegundoSorteio": null,
+    "id": null
+}
