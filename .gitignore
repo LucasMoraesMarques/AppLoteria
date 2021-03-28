@@ -1,14 +1,32 @@
-app/
 __pycache__/
 *.sqlite3
 
 .DS_Store
 
-/Funcionalidades/todosLotoFiltrados.csv
-/Funcionalidades/todosjogosloto.csv
+/app/Lib/site-packages/kivy/
+/app/Lib/site-packages/Kivy-2.0.0.dist-info/
+/app/Lib/site-packages/kivy_deps/
+/app/Lib/site-packages/kivy_deps.angle-0.3.0.dist-info/
+/app/Lib/site-packages/kivy_deps.glew-0.3.0.dist-info/
+/app/Lib/site-packages/kivy_deps.gstreamer-0.3.1.dist-info/
+/app/Lib/site-packages/kivy_deps.sdl2-0.3.1.dist-info/
+/app/Lib/site-packages/Kivy_examples-2.0.0.dist-info/
+/app/Lib/site-packages/Kivy_Garden-0.1.4-py3.8.egg-info/
+/app/Lib/site-packages/Kivy-2.0.0.dist-info/
+/app/Lib/site-packages/kivy_deps/
+/app/Lib/site-packages/Pillow-8.1.2.dist-info/
+/app/Lib/site-packages/kivy_deps.gstreamer-0.3.1.dist-info/
+/app/Lib/site-packages/kivy_deps.glew-0.3.0.dist-info/
+/app/Lib/site-packages/kivy_deps.angle-0.3.0.dist-info/
+/app/Lib/site-packages/PyQt5/
+/app/Lib/site-packages/kivy_deps.sdl2-0.3.1.dist-info/
+/app/Lib/site-packages/Kivy_examples-2.0.0.dist-info/
+/app/Lib/site-packages/PyQt5_sip-12.8.1.dist-info/
+/app/Lib/site-packages/Kivy_Garden-0.1.4-py3.8.egg-info/
+/app/Lib/site-packages/pyqt5_tools/
+/app/Lib/site-packages/pyqt5_tools-5.15.0.1.7.1.dist-info/
+/app/Lib/site-packages/PIL/
+/app/Lib/site-packages/PyQt5-5.15.0.dist-info/
+/.vscode/
+/app/
 
-/data/loterias/diadesorte/todasCombsFiltradas.csv
-/data/loterias/lotofacil/todasCombsFiltradas.csv
-/data/loterias/lotofacil/todosjogosloto.csv
-/Testes
-/allfiltered.csv

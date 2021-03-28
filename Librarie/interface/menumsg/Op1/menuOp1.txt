@@ -1,4 +1,4 @@
-Oferecemos duas opções de entrada de jogos externos:
+Oferecemos três opções de entrada de jogos externos:
 
 1 -> Entrada manual por digitação
 2 -> Entrada por arquivo

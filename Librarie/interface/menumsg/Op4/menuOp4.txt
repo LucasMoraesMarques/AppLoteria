@@ -1,7 +1,7 @@
 Escolha uma opção:
 
 1 -> Ver último sorteio disponível
-2 -> Ver database com todos os resultados
+2 -> Ver últimos 50 resultados
 3 -> Estatísticas
 
 Digite -3 para voltar ao menu Iniciar

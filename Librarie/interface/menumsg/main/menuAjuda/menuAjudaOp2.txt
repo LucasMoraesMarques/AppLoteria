@@ -5,8 +5,23 @@ FUNCIONALIDADES
     Permite os seguintes tipos de entradas de jogos externos:
 
     1 -> Entrada manual por digitação
-    2 -> Entrada por arquivo (csv, txt, xlsx)
+        Permite:
+        -> Especificar o número de jogos
+        -> O número de marcações por apostas
+
+    2 -> Entrada por arquivo
+        Permite:
+        -> Arquivos do tipo csv, txt ou xlsx
+        -> Especificar o número de jogos
+        -> O número de marcações por apostas
+
     3 -> Entrada pela Área de transferência (ctrl + c)
+        Permite:
+        -> Leitura de jogos copiados seguindo os seguintes requisitos:
+            -> Números separados por vírgula(sem espaço entre número e vírgula)
+            -> Números separados por espaços
+            -> Um jogo por linha
+            -> Qualquer tamanho de jogo
 
 -> GERADORES DE JOGOS
 
@@ -15,7 +30,7 @@ FUNCIONALIDADES
         -> Permite jogos com mais números por aposta
         -> Permite remoção e fixação de números
 
-    2 -> GERADOR INTELIGENTE:
+    2 -> GERADOR INTELIGENTE (Disponível apenas com download de arquivos externos)
         -> Gera jogos randômicos de forma personalizada, por meio de filtros específicos
         -> Permite filtros como:
             -> Máxima diferença entre dois números
@@ -43,4 +58,5 @@ FUNCIONALIDADES
 
     1 -> Mostrar todos os resultados de uma determinada Loteria
     2 -> Mostrar estatísticas dos resultados
-
+    3 -> Filtrar database de resultados
+    4 -> Mostrar combinações que mais saíram

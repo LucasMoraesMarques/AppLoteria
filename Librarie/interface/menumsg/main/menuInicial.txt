@@ -2,6 +2,7 @@ Escolha uma opção:
 
 1 -> INICIAR
 2 -> AJUDA
-3 -> SOBRE
+3 -> DOWNLOAD
+4 -> SOBRE
 
 Digite -1 para sair

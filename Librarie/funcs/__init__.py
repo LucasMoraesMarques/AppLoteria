@@ -9,15 +9,18 @@ pd.set_option('display.column_space', 40)
 
 
 class ValueNotInRange(Exception):
+    """ Exceção que é levantada quando um valor entrado não está no intervalo permitido"""
 
     def __init__(self, nrange):
         self.nrange = nrange
 
     def __str__(self):
-        return st.textLine(f'ERRO! Digite um número inteiro válido dentro do intervalo {self.nrange[0]} a {self.nrange[-1]}.', "vermelho")
+        return st.textLine(f'ERRO! Digite um número inteiro válido dentro do intervalo '
+                           f'{self.nrange[0]} a {self.nrange[-1]}.', "vermelho")
 
 
 class OptionDoesNotExist(Exception):
+    """ Exceção que é levantada quando um valor entrado não está na lista permitida"""
 
     def __init__(self, allowed):
         self.nAllowed = allowed
@@ -26,19 +29,25 @@ class OptionDoesNotExist(Exception):
         return st.textLine('ERRO! Digite uma opção disponível.', "vermelho")
 
 
-def leia_int(msg, nrange=0, allowed=0):
-    """Função que trata os erros de um input de um número inteiro
+def leia_int(msg, nrange=False, allowed=False):
+    """Função que trata os erros de um input de um número inteiro, levando
+    em consideração intervalos (nrange) ou lista de permissão (allowed)
 
     :param msg: Recebe o texto a ser printado para o usuário
+    :param nrange: Se passado, limita o input ao range dado
+    :param allowed: Se passado, limita o input à lista passada
     :return: Retorna inteiro digitado sem erros no  programa
     """
+
     while True:
         try:
             n = int(input(msg))
-            if nrange and n not in nrange:
-                raise ValueNotInRange(nrange)
-            elif allowed and n not in allowed:
-                raise OptionDoesNotExist(allowed)
+            if nrange:
+                if n not in nrange:
+                    raise ValueNotInRange(nrange)
+            elif allowed:
+                if n not in allowed:
+                    raise OptionDoesNotExist(allowed)
         except (ValueError, TypeError):
             print(st.textLine('ERRO! Digite um número inteiro válido.', 'vermelho'))
         except ValueNotInRange as exception:
@@ -53,16 +62,17 @@ def leia_int(msg, nrange=0, allowed=0):
 
 
 def isOdd(jogo):
-    """Checa se um jogo é par ou ímpar
+    """Checa se um jogo é majoritariamente par ou ímpar
 
     :param jogo: Jogo único
     :return: Retorna True se o jogo é predominantemente ímpar. Caso contráriio, retorna False
     """
-    bolArray = jogo.map(lambda x: x % 2)
-    if jogo.size % 2 != 0:
-        return True if bolArray.sum(axis=0) > np.floor(jogo.size / 2) else False
+
+    bolArray = map(lambda x: x % 2, jogo)
+    if len(jogo) % 2 != 0:
+        return True if sum(bolArray) > np.floor(len(jogo) / 2) else False
     else:
-        return True if bolArray.sum(axis=0) > (jogo.size / 2) else False
+        return True if sum(bolArray) > (len(jogo) / 2) else False
 
 
 def gap(jogo):
@@ -70,29 +80,28 @@ def gap(jogo):
 
     :return: Array com os espaçamentos
     """
-    g = []
+    gaps = []
     for i in range(0, len(jogo) - 1):
-        g.append(jogo[i + 1] - jogo[i])
-    return g
+        gaps.append(jogo[i + 1] - jogo[i])
+    return gaps
 
 
 def sequences(jogo):
-    """Checa as sequências presentes e retorna o seu tamanho
+    """Checa as sequências ininterruptas presentes
 
     :return: Quantia de números em cada sequência
     """
-    g = gap(jogo)
+    gaps = gap(jogo)
     s = 1
     seq = []
-    for i in range(0, len(g)):
-        if g[i] == 1:
+    for i in range(0, len(gaps)):
+        if gaps[i] == 1:
             s += 1
         else:
             seq.append(s)
             s = 1
     else:
         seq.append(s)
-
     return seq
 
 
@@ -106,7 +115,7 @@ def hasCol(jogo):
                      [4, 9, 14, 19, 24], [5, 10, 15, 20, 25]])
     hasCol = []
     for col in cols:
-        hasCol.append(True if (ints := len(np.intersect1d(col, jogo))) != 0 else False)
+        hasCol.append(True if (len(np.intersect1d(col, jogo))) != 0 else False)
     return hasCol
 
 
@@ -120,20 +129,20 @@ def hasRow(jogo):
                      np.arange(16, 21), np.arange(21, 26)])
     hasRowArr = []
     for row in rows:
-        hasRowArr.append(True if (ints := len(np.intersect1d(row, jogo))) != 0 else False)
+        hasRowArr.append(True if (len(np.intersect1d(row, jogo))) != 0 else False)
     return hasRowArr
 
 
 def nPrimeNumbers(jogo):
     """Checa a quantia de números primos presentes no jogo
 
-    :param loto_range:
-    :return: Retorna o número de primos presentes
+    :param jogo: Jogo a ser analisado
+    :return: Número de primos presente
     """
     primeNumbers = []
     for i in jogo:
         s = 0
-        for j in range(1, i + 1):
+        for j in range(1, int(i) + 1):
             if i % j == 0:
                 s += 1
         if s == 2:
@@ -142,61 +151,60 @@ def nPrimeNumbers(jogo):
 
 
 def askUserFixedAndRemovedNumbers(loto, gen=1):
-    """ Pede o input dos números removidos e fixos
+    """Pede o input dos números removidos e fixos
 
-    :param nRemoved: Quantidade de números removidos
-    :param nFixed: Quantidade de números fixados
-    :return: Retorna o input dos números removidos e fixados
+    :param loto: Instância da classe Loterias
+    :param gen: Tipo de gerador. O padrão é 1 (gerador simples)
+    :return: Números removidos, números fixados, marcações por jogo, número de jogos
     """
     if gen == 2:
         nPlayed = loto.metadata['nRange'][0]
-        print(f"O seu jogo será limitado a {nPlayed} números")
+        print(st.textLine(f"O seu jogo será limitado a {nPlayed} números", 'azul'))
 
     else:
         nRange = list(loto.metadata['nRange'])
         nPos = list(loto.metadata['nPossiveis'])
-        msg2 = f"Você pode escolher de {nRange[0]} a {nRange[-1]} dentre {nPos[0]} a {nPos[-1]}\n"
-        print(st.textLine(msg2))
-        nPlayed = leia_int("Quantos números deseja em cada jogo?", nrange=loto.metadata["nRange"])
-    nRemoved = leia_int("Deseja remover quantos números?", nrange=range(0, nPlayed+1))
-    nFixed = leia_int("Deseja fixar quantos números?", nrange=range(0, nPlayed-nRemoved+1))
+        print(st.textLine(f"Você pode escolher de {nRange[0]} a {nRange[-1]} dentre {nPos[0]} a {nPos[-1]}\n", 'azul'))
+        nPlayed = leia_int(st.textLine("Quantos números deseja em cada jogo?", 'azul'), nrange=loto.metadata["nRange"])
+
+    nRemoved = leia_int(st.textLine("Deseja remover quantos números?", 'azul'), nrange=range(0, nPlayed+1))
+    nFixed = leia_int(st.textLine("Deseja fixar quantos números?", 'azul'), nrange=range(0, nPlayed-nRemoved+1))
 
     if nRemoved > 0:
-        print("Digite os números a serem excluídos.")
+        print(st.textLine("\nDigite os números a serem excluídos.", 'azul'))
         removedNumbers = np.zeros(nRemoved)
         j = 0
         while j != nRemoved:
-            n = leia_int(f"Digite o número {j+1}:", nrange=loto.metadata['nPossiveis'])
+            n = leia_int(st.textLine(f"Digite o número {j+1}:", 'vermelho'), nrange=loto.metadata['nPossiveis'])
             if n not in removedNumbers:
                 removedNumbers[j] = n
                 j+=1
             else:
-                print("Valor já cadastrado")
+                print(st.textLine("Valor já cadastrado", 'vermelho'))
     else:
         removedNumbers = []
 
     if nFixed > 0:
-        print("Digite os números a serem fixados:")
+        print(st.textLine("\nDigite os números a serem fixados:",'azul'))
         fixedNumbers = np.zeros(nFixed)
         j = 0
         while j != nFixed:
-            n = leia_int(f"Digite o número {j+1}:", nrange=loto.metadata['nPossiveis'])
+            n = leia_int(st.textLine(f"Digite o número {j+1}:", 'verde'), nrange=loto.metadata['nPossiveis'])
             if (n not in removedNumbers) and (n not in fixedNumbers):
                 fixedNumbers[j] = n
                 j += 1
             else:
                 if n in removedNumbers:
-                    print("Valor cadastrado nos excluídos")
+                    print(st.textLine("Valor já cadastrado nos excluídos", 'vermelho'))
                 else:
-                    print("Valor já cadastrado")
-
+                    print(st.textLine("Valor já cadastrado", 'vermelho'))
     else:
         fixedNumbers = []
 
     if gen == 1:
         nCombs = math.comb((nPos[-1] - nRemoved - nFixed), (nPlayed - nFixed))
-        print("\n\033[1;30mO número de combinações possíveis são:", nCombs)
-        nJogos = leia_int("Quantos jogos deseja?", nrange=range(1, nCombs))
+        print(st.textLine("\nO número de combinações possíveis são:" + f' {nCombs}', 'azul'))
+        nJogos = leia_int(st.textLine("Quantos jogos deseja?", 'azul'), nrange=range(1, nCombs))
         return removedNumbers, fixedNumbers, nPlayed, nJogos
     else:
         return removedNumbers, fixedNumbers, nPlayed
@@ -234,10 +242,10 @@ def calcCombs(database, nPlayed, numbersRemoved, numbersFixed, kwargs):
     :return: Todas as combinações válidas
     """
     dt = database
-    dtAuxIndexes = dt.loc[:, "0":f"{nPlayed-1}"][~dt.isin(numbersRemoved)].dropna().index
-    dtAux1 = dt.loc[dtAuxIndexes, "0": f"{nPlayed-1}"]
+    dtAuxIndexes = dt.iloc[:, 0:nPlayed][~dt.isin(numbersRemoved)].dropna().astype('int8').index
+    dtAux1 = dt.iloc[dtAuxIndexes, 0: nPlayed]
     for i in numbersFixed:
-        dtAuxIndexes = dtAux1[dtAux1.isin([i])].dropna(how="all").index
+        dtAuxIndexes = dtAux1[dtAux1.isin([i])].dropna(how="all").astype('int8').index
         dtAux1 = dtAux1.loc[dtAuxIndexes, :]
 
     dt = dt.loc[dtAux1.index, :]
@@ -271,35 +279,46 @@ def checkScores(jogo, res):
         return scores
 
 
-
 def getExternalJogo(nJogos, nPlayed, nrange):
+    """Entra jogos externos por digitação
+
+    :param nJogos: Número de jogos a ser lido
+    :param nPlayed: Marcações por jogos
+    :param nrange: Range permitido pela loteria especificada
+    :return: Dicionário com os Jogos digitados
+    """
     jogos = dict()
     for i in range(1, nJogos + 1):
         jogos[f"Jogo {i}"] = []
-        print(f"Jogo {i}:")
+        print(f"\nJogo {i}:")
         j = 1
         while j != nPlayed+1:
-            n = leia_int(f"Digite o número {j}:", nrange)
+            n = leia_int(st.textLine(f"Digite o número {j}:", 'azul'), nrange)
             if n not in jogos[f"Jogo {i}"]:
                 jogos[f"Jogo {i}"].append(n)
                 j += 1
             else:
-                print("Valor já cadastrado")
+                print(st.textLine("Valor já cadastrado", 'vermelho'))
 
     return jogos
 
 
 def transFilterNames(col):
+    """Traduz o nome da coluna do filtro em texto
+
+    :param col: Filtro
+    :return: Texto autoexplicativo do filtro
+    """
     if col == "isOdd":
-        print(st.textLine("\nParidade dos Jogos (par ou ímpar):", 'azul'))
+        return st.textLine("\nParidade dos Jogos (par ou ímpar):", 'azul')
     elif col == "maxGap":
-        print(st.textLine("\nMáxima diferença entre dois números:", 'azul'))
+        return st.textLine("\nMáxima diferença entre dois números:", 'azul')
     elif col == "maxSeq":
-        print(st.textLine("\nMáxima sequência ininterrupta de números:", 'azul'))
+        return st.textLine("\nMáxima sequência ininterrupta de números:", 'azul')
     elif col == "minSeq":
-        print(st.textLine("\nMínima sequência ininterrupta de números:", 'azul'))
+        return st.textLine("\nMínima sequência ininterrupta de números:", 'azul')
     elif col == "nPrime":
-        print(st.textLine("\nQuantidade de números primos por jogo:", 'azul'))
+        return st.textLine("\nQuantidade de números primos por jogo:", 'azul')
 
 
 def makeCombinations(n, nRange):
@@ -340,6 +359,11 @@ def makeCombinations(n, nRange):
 
 
 def binaryMapping(nUplas):
+    """Decodifica as combinações binárias em jogos
+
+    :param nUplas: n-uplas binárias geradas por makeCombinations
+    :return: n-uplas mapeadas em jogos
+    """
     combsMapped = []
     for comb in nUplas:
         a = []
@@ -351,26 +375,12 @@ def binaryMapping(nUplas):
 
 
 def checkCombinations(combs, jogos):
+    """Rankeia as n-uplas em relação a database de resultados da loteria dada
+
+    :param combs: Todas as n-uplas mapeadas em jogos
+    :param jogos: Jogos da database de resultados
+    :return: Series com o ranking das n-uplas
     """
-    Dado n entrado pelo user, quantificar as n-uplas que mais sairam na amostra de 100 resultados
-    contida na lista jogos. As n-uplas seram formadas pelos números do nRange. Por exemplo,
-
-    n=2
-    nRange = 5
-
-    As n-uplas ou, nesse caso, duplas possíveis serão
-
-    (1, 2), (1, 3), (1, 4), (1, 5)
-    (2, 3), (2, 4), (2, 5)
-    (3, 4), (3, 5)
-    (4, 5)
-
-    Que totalizam 10 combinações de 2 números, ou seja, Comb(nRange, n).
-
-    Com essas combinações criadas, checar em cada jogo da lista jogos e contabilizar as presentes,
-    gerando uma relação das mais frequentes levando em conta toda a amostra.
-    """
-
     dictCombsRanking = {f"{comb}": 0 for comb in combs}
 
     for index, jogo in jogos.iterrows():
