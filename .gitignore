@@ -30,3 +30,6 @@ __pycache__/
 /.vscode/
 /app/
 
+/user_data/user_games/ignore.txt
+/user_data/user_games/megasena/results/ignore.txt
+/user_data/user_games/megasena/games/ignore.txt

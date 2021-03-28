@@ -33,6 +33,8 @@ class Sorteio(object):
         url = self.url_mapper[f"{self.loteria.nome}"]
         try:
             resp = requests.get(url)
+            if resp.status_code != 200:
+                raise RequestException
         except RequestException:
             print(st.textLine("O resultado do concurso atual não está disponível", 'vermelho'))
         else:

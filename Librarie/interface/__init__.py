@@ -176,7 +176,8 @@ def handleSorteioResults(jogos):
         showOptions(msgOp3)
     elif choice == 1:
         sorteio.requestLastResult()
-        jogos.checkResults(sorteio)
+        if len(sorteio.metadata) != 0:
+            jogos.checkResults(sorteio)
     elif choice == 2:
         print(st.textLine(f"A {loto.nome.upper()} possui {loto.resultados.shape[0]} concursos. Escolha um: ", 'azul'))
         userInput = getUserInput(allowed=loto.resultados.index.astype('int64').to_list())
